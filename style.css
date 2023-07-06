@@ -1,0 +1,142 @@
+/*  Poppins Weights: 400i, 700, 800i */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+/* ------------- Variable --------------- */
+:root {
+  /* Colors */
+  /* Primary */
+
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+
+  /* Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* -----------  General Style ------------ */
+.error-message {
+  color: transparent;
+  font-size: 0.4em;
+  margin: 5px;
+  font-weight: 400;
+  font-style: italic;
+}
+label {
+  font-size: 0.5em;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--Smokey-grey);
+}
+input {
+  font-size: 1em;
+  max-width: 4em;
+  padding: 5px;
+  margin-right: 1rem;
+  font-weight: 700;
+  color: var(--Off-black);
+  cursor: pointer;
+  border: 2px solid var(--Off-black);
+  background-color: transparent;
+}
+input::placeholder {
+  color: var(--Light-grey);
+  font-weight: 700;
+}
+input:focus {
+  border-color: var(--Purple);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.value {
+  color: var(--Purple);
+}
+/* ------------ Target Style ---------------- */
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Off-white);
+}
+.container {
+  background-color: var(--White);
+  padding: 1em;
+  border-radius: 5%;
+  border-bottom-right-radius: 25%;
+}
+.upper {
+  display: flex;
+  align-items: end;
+}
+.input {
+  display: flex;
+  border-bottom: 2px solid var(--Light-grey);
+  padding-right: 0.5em;
+  padding-bottom: 1rem;
+}
+.button {
+  background-color: var(--Purple);
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  padding: 1rem;
+  position: relative;
+  bottom: -25px;
+  right: 0;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--Off-black);
+}
+.display {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 800;
+  padding: 1rem;
+}
+
+/* ************** MEDIA SCREEN: MOBILE ************* */
+
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 24px;
+  }
+  .container {
+    max-width: 96vw;
+    margin: 0.5rem;
+  }
+  .upper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input {
+    position: relative;
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+  .button {
+    position: relative;
+    bottom: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: 0.5rem;
+  }
+}

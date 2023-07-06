@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper">
+        <div class="input">
+          <div class="date">
+            <label for="date">Day</label><br />
+            <input type="number" placeholder="DD" id="date" />
+            <p class="error-message">* Date must be valid</p>
+          </div>
+          <div class="month">
+            <label for="month">Month</label><br />
+            <input type="number" placeholder="MM" id="month" />
+            <p class="error-message">* Month must be valid</p>
+          </div>
+          <div class="year">
+            <label for="year">Year</label><br />
+            <input type="number" placeholder="YYYY" id="year" />
+            <p class="error-message">* Year should be in past</p>
+          </div>
+        </div>
+        <img
+          class="button"
+          src="./assets/images/icon-arrow.svg"
+          onclick="handleClick()"
+        />
+      </div>
+      <div class="display">
+        <div class="year-value"><span class="value">--</span> years</div>
+        <div class="month-value"><span class="value">--</span> months</div>
+        <div class="day-value"><span class="value">--</span> days</div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">ANG</a>.
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
